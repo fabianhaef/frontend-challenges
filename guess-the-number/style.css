@@ -81,7 +81,7 @@ a {
   margin: 20px;
 }
 
-.counter {
+.guess-a-number {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,6 +101,6 @@ a {
   height: 32px;
 }
 
-.button__plus, .button__minus {
-  width: 64px;
+.button__submit, .button__start {
+  width: 92px;
 }

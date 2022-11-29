@@ -1,29 +1,34 @@
-const score = document.querySelector('.score');
-const increment = document.querySelector('.increment')
-const incrementInput = document.querySelector('.input__increment')
-const plusButton = document.querySelector('.button__plus');
-const minusButton = document.querySelector('.button__minus');
-const resetButton = document.querySelector('.button__reset');
+const guessInputField = document.querySelector('#guess');
+const submitButton = document.querySelector('.button__submit');
+const startGameButton = document.querySelector('.button__start');
+const accuracy = document.querySelector('.accuracy');
+const guesses = document.querySelector('.guesses');
 
-let count = 0;
+let guess = []; 
 
-score.innerHTML = count;
+// define random number between 0 and 100
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-const getCurrentIncrement = () => {
-  return parseInt(incrementInput.value);
-}
+submitButton.addEventListener('click', () => {
+  let currentGuess = parseInt(guessInputField.value);
+  guess.push(currentGuess);
 
-plusButton.addEventListener('click', () => {
-  count += getCurrentIncrement();
-  score.innerHTML = parseInt(count);
-});
+  if (currentGuess === randomNumber) {
+    accuracy.innerHTML = 'You guessed correctly!';
+  } else if (currentGuess < randomNumber) {
+    accuracy.innerHTML = 'Your guess is too low';
+  } else {
+    accuracy.innerHTML = 'Your guess is too high';
+  }
 
-minusButton.addEventListener('click', () => {
-  count -= getCurrentIncrement();
-  score.innerHTML = count;
-});
+  guesses.innerHTML = guess.join(', ');
+})
 
-resetButton.addEventListener('click', () => {
-  count = 0;
-  score.innerHTML = count;
-});
+
+startGameButton.addEventListener('click', () => {
+  guess = [];
+  accuracy.innerHTML = '';
+  guesses.innerHTML = '';
+  guessInputField.value = '';
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+})
