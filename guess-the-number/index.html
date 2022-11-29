@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> 
+  <title>Counter</title>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html">Home</a>
+
+    <h1>Counter</h1>
+
+    <a href="https://github.com/fabianhaef/frontend-challenges" class="header__image--wrapper">
+      <img src="../assets/github-mark.png" alt="Github Mark" class="header__image">
+    </a>
+  </header>
+
+  <main class="main">
+    <div class="counter">
+      <div class="score"></div>
+      <div class="buttons">
+        <button class="button button__plus">+</button>
+        <button class="button button__minus">-</button>
+      </div>
+      <div class="increment">
+      <label for="increment">Increment/Decrement by:</label>
+        <input class="input__increment"type="number" name="increment" min="1" value="1">
+      </div>
+      <button class="button button__reset">Reset</button>
+    </div>
+  </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
