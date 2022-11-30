@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css"> 
-  <title>Guess The Number</title>
+  <title>Telephone Number Formatter</title>
 </head>
 <body>
   <header class="header">
-    <a href="../index.html">Home</a>
+    <a href="../index.html">Telephone Number Formatter</a>
 
     <h1>Counter</h1>
 
@@ -20,14 +20,8 @@
 
   <main class="main">
     <div class="guess-a-number">
-    <label for="guess">Enter a guess between 0 and 100</label>
-    <input type="number" id="guess" min="0" max="100">
-      <div class="buttons">
-        <button class="button button__submit">Submit</button>
-        <button class="button button__start">Start Game</button>
-      </div>
-      <div class="accuracy"></div>
-      <div class="guesses"></div>
+      <input type="tel" id="phoneNumber" placeholder="phone number"> 
+      <div id="result"></div>
     </div>
   </main>
 
