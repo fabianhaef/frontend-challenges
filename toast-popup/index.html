@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> 
+  <title>Toast-Popup</title>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html">Toast-Popup</a>
+
+    <h1>Toast-Popup</h1>
+
+    <a href="https://github.com/fabianhaef/frontend-challenges" class="header__image--wrapper">
+      <img src="../assets/github-mark.png" alt="Github Mark" class="header__image">
+    </a>
+  </header>
+
+  <main class="main">
+    <div class="toast-popup">
+      <select name="placement" id="placement">
+        <option value="top-left">Top Left</option>
+        <option value="top-right">Top Right</option>
+        <option value="bottom-left">Bottom Left</option>
+        <option value="bottom-right">Bottom Right</option>
+      </select>
+      <select name="type" id="type">
+        <option value="success">Success</option>
+        <option value="error">Error</option>
+        <option value="warning">Warning</option>
+        <option value="info">Info</option>
+      </select>
+      <label for="text">Text</label>
+      <input type="text" id="text">
+      <label for="duration">Duration</label>
+      <input type="range" id="duration">
+      <button>Generate Toast Popup</button>
+    </div>
+  </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
